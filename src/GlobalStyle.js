@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif; 
     }
 
     body{
@@ -18,6 +19,11 @@ export const GlobalStyle = createGlobalStyle`
 
       a:hover{
         cursor: pointer;
+        color: #F88050;
+        font-weight: bold;
+      }
+
+      h2{
         color: #F88050;
       }
     `

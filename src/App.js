@@ -1,10 +1,10 @@
 import { GlobalStyle }  from "./GlobalStyle"
 import TeladeLogin from "./components/TeladeLogin/TeladeLogin";
-import TelaCadastroDadosPessoais from "./components/TelaCadastroDadosPessoais/TelaCadastroDadosPessoais";
+import TelaCadastroDadosBasicos from "./components/TelaCadastroDadosBasicos/TelaCadastroDadosBasicos";
+import TelaCadastroCompleto from "./components/TelaCadastroCompleto/TelaCadastroCompleto";
+import TelaCadastroFinalizado from "./components/TelaCadastroFinalizado/TelaCadastroFinalizado";
 import styled from "styled-components";
 import { useState } from "react";
-// import fundo from "./assets/Fundo.jpg"
-
 
 
 const StyleContainer = styled.div`
@@ -18,22 +18,27 @@ function App() {
 
   const [tela, setTela] = useState(1)
 
-  function mudarTela (valor){
+  const mudarTela = (valor)=> {
     setTela(valor)
   }
 
   function renderizaTela (){
     switch(tela){
       case 1:
-        return <TeladeLogin mudarTela={mudarTela}/>
+        return <TeladeLogin mudarTela={mudarTela}/>;
       case 2:
-        return <TelaCadastroDadosPessoais mudarTela={mudarTela}/>
+        return <TelaCadastroDadosBasicos mudarTela={mudarTela}/>;
+      case 3:
+        return <TelaCadastroCompleto mudarTela={mudarTela}/>;
+      case 4:
+        return <TelaCadastroFinalizado mudarTela={mudarTela}/>;
       default:
         return <TeladeLogin mudarTela={mudarTela}/>
     }
   }
 
   return (
+
     <StyleContainer>
     <GlobalStyle/>
     {renderizaTela()}

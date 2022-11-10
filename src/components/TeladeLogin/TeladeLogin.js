@@ -8,7 +8,7 @@ function TeladeLogin(props){
         <StyleBoxContainer>
             <StyleLogoBox>
                 <StyleDiv>
-                    <img class="img-logo"src={logo} alt="logo"/>
+                    <img className="img-logo"src={logo} alt="logo"/>
                 </StyleDiv>
             </StyleLogoBox>
             <StyleMainBox>
@@ -28,8 +28,8 @@ function TeladeLogin(props){
             <StyleFooterBox>
                 <StyleDiv>
                     <StyleDivSocial>
-                    <a href="https://github.com/DanielEmidio1988" target="_blank"><img class="icon-logo-social" src={github} alt="github"/></a>
-                    <a href="https://www.linkedin.com/in/danielemidio1988/" target="_blank"><img class="icon-logo-social" src={linkedin} alt="linkedin"/></a>
+                    <a href="https://github.com/DanielEmidio1988" target="_blank"><img className="icon-logo-social" src={github} alt="github"/></a>
+                    <a href="https://www.linkedin.com/in/danielemidio1988/" target="_blank"><img className="icon-logo-social" src={linkedin} alt="linkedin"/></a>
                     </StyleDivSocial>
                 </StyleDiv>
             </StyleFooterBox>

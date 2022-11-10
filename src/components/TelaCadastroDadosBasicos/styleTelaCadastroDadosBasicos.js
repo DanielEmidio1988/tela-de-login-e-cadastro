@@ -12,7 +12,6 @@ export const StyleBoxContainer = styled.div`
     border: 2px solid #ffffff30;
     box-shadow: 1px 1px 6px #EBEBEA; 
 `
-
 export const StyleLogoBox = styled.div`
     width: 100%;
 `
