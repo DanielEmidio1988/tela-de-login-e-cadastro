@@ -1,14 +1,14 @@
-import {StyleButton, StyleBoxContainer, StyleLogoBox, StyleMainBox, StyleFooterBox, StyleInput, StyleDivSocial, StyleBoxButton, StyleDiv} from "./styleTelaCadastroDadosPessoais"
+import {StyleButton, StyleBoxContainer, StyleLogoBox, StyleMainBox, StyleFooterBox, StyleInput, StyleDivSocial, StyleBoxButton, StyleDiv} from "./styleTelaCadastroDadosBasicos"
 import logo from "../../assets/logo.png"
 import github from "../../assets/github.svg"
 import linkedin from "../../assets/linkedin.svg"
 
-function TelaCadastroDadosPessoais(props){
+function TelaCadastroDadosBasicos(props){
     return (
         <StyleBoxContainer>
             <StyleLogoBox>
                 <StyleDiv>
-                    <img class="img-logo"src={logo} alt="logo"/>
+                    <img className="img-logo"src={logo} alt="logo"/>
                 </StyleDiv>
             </StyleLogoBox>
             <StyleMainBox>
@@ -17,11 +17,11 @@ function TelaCadastroDadosPessoais(props){
                 </StyleDiv>
                 <StyleDiv>
                     <p>ENDEREÇO DE E-MAIL:</p>
-                    <StyleInput type="password" placeholder="ENDEREÇO DE E-MAIL"/>
+                    <StyleInput type="text" placeholder="ENDEREÇO DE E-MAIL"/>
                     <p>DIGITE UMA SENHA:</p>
-                    <StyleInput type="password" placeholder="ENDEREÇO DE E-MAIL"/>
+                    <StyleInput type="password" placeholder="DIGITE UMA SENHA"/>
                     <p>CONFIRME SUA SENHA:</p>
-                    <StyleInput type="password" placeholder="ENDEREÇO DE E-MAIL"/>
+                    <StyleInput type="password" placeholder="CONFIRME SUA SENHA"/>
 
                 </StyleDiv>
                 <StyleBoxButton>
@@ -32,8 +32,8 @@ function TelaCadastroDadosPessoais(props){
             <StyleFooterBox>
                 <StyleDiv>
                     <StyleDivSocial>
-                    <a href="https://github.com/DanielEmidio1988" target="_blank"><img class="icon-logo-social" src={github} alt="github"/></a>
-                    <a href="https://www.linkedin.com/in/danielemidio1988/" target="_blank"><img class="icon-logo-social" src={linkedin} alt="linkedin"/></a>
+                    <a href="https://github.com/DanielEmidio1988" target="_blank"><img className="icon-logo-social" src={github} alt="github"/></a>
+                    <a href="https://www.linkedin.com/in/danielemidio1988/" target="_blank"><img className="icon-logo-social" src={linkedin} alt="linkedin"/></a>
                     </StyleDivSocial>
                 </StyleDiv>
             </StyleFooterBox>
@@ -42,4 +42,4 @@ function TelaCadastroDadosPessoais(props){
     )
 }
 
-export default TelaCadastroDadosPessoais
+export default TelaCadastroDadosBasicos
