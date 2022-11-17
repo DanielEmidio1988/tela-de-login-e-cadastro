@@ -1,4 +1,3 @@
-import { GlobalStyle }  from "./GlobalStyle"
 import TeladeLogin from "./components/TeladeLogin/TeladeLogin";
 import TelaCadastroDadosBasicos from "./components/TelaCadastroDadosBasicos/TelaCadastroDadosBasicos";
 import TelaCadastroCompleto from "./components/TelaCadastroCompleto/TelaCadastroCompleto";
@@ -40,7 +39,7 @@ function App() {
   return (
 
     <StyleContainer>
-    <GlobalStyle/>
+    
     {renderizaTela()}
     </StyleContainer>
   );

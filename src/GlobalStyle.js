@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
         background-position: top center;
         background-size: 100% auto;
         background-repeat: no-repeat;
+        background-color: #1E3B41;
       }
 
       a:hover{

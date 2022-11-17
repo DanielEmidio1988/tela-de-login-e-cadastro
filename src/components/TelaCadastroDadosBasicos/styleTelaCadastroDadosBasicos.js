@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const StyleBoxContainer = styled.div`
     background-color: white;
-    height: 600px;
-    width: 600px; 
+    width: 40vw;
+    height: 60vh;
+    min-height: 600px;
+    min-width: 300px; 
     display: flex;
     flex-direction: column; 
     justify-content: space-between;

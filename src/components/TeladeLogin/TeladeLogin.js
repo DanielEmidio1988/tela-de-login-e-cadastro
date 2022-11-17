@@ -3,6 +3,10 @@ import logo from "../../assets/logo.png"
 import github from "../../assets/github.svg"
 import linkedin from "../../assets/linkedin.svg"
 
+function Alerta(){
+    alert("Usuário não encontrado!")
+}
+
 function TeladeLogin(props){
     return (
         <StyleBoxContainer>
@@ -21,7 +25,7 @@ function TeladeLogin(props){
                     <StyleInput type="password" placeholder="DIGITE SUA SENHA"/>
                 </StyleDiv>
                 <StyleDiv>
-                    <StyleButton>Login</StyleButton>
+                    <StyleButton onClick={Alerta}>Login</StyleButton>
                     <p>Não tem cadastro? <a onClick={()=>{props.mudarTela(2)}}>Registre-se</a></p>
                 </StyleDiv>
             </StyleMainBox>
