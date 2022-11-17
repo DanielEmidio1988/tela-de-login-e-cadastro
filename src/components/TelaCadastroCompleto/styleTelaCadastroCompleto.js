@@ -2,8 +2,10 @@ import styled from "styled-components"
 
 export const StyleBoxContainer = styled.div`
     background-color: white;
-    height: 700px;
-    width: 900px; 
+    min-height: 700px;
+    height: 70vh;
+    width: 60vw;
+    min-width: 360px; 
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
@@ -97,6 +99,7 @@ export const StyleDivCadastro = styled.div`
     display: flex;
     justify-content: center;
 
+
     div:first-child{
         width: 65%;
     }
@@ -109,12 +112,31 @@ export const StyleDivCadastro = styled.div`
         gap: 10px;
         
         img:first-child{
-            width: 200px;
+            width: 14vw;
+            min-width: 100px;
             border-radius: 50%;
             border: 3px solid #E3E3E3;
         }
         img:last-child{
-            width: 60px;
+            width: 5vw;
+            min-width: 40px;
+        }
+
+
+    }
+    @media screen and (max-device-width: 500px){
+        flex-direction: column-reverse;
+        gap: 20px;
+        width: 90%;
+
+        div:first-child{
+            width: 100%;
+            justify-content: center;
+        }
+
+        div:last-child{
+            width: 100%;
+            justify-content: center;
         }
     }
 `

@@ -2,8 +2,34 @@ import {StyleButton, StyleBoxContainer, StyleLogoBox, StyleMainBox, StyleFooterB
 import logo from "../../assets/logo.png"
 import github from "../../assets/github.svg"
 import linkedin from "../../assets/linkedin.svg"
+import { useState } from "react"
 
 function TelaCadastroDadosBasicos(props){
+    const [email, setEmail] = useState("")
+    const [senha,setSenha] = useState("")
+    const [confirmaSenha, setConfirmaSenha] = useState("")
+
+    function ValidaSenha(){
+        if (senha !== confirmaSenha){
+            alert("Senhas divergentes!")
+        }else{
+            props.mudarTela(3) 
+        }
+
+    }
+
+    function onChangeEmail(event){
+        setEmail(event.target.value)
+    }
+
+    function onChangeSenha(event){
+        setSenha(event.target.value)
+    }
+
+    function onChangeConfirmaSenha(event){
+        setConfirmaSenha(event.target.value)
+    }
+
     return (
         <StyleBoxContainer>
             <StyleLogoBox>
@@ -17,16 +43,16 @@ function TelaCadastroDadosBasicos(props){
                 </StyleDiv>
                 <StyleDiv>
                     <p>ENDEREÇO DE E-MAIL:</p>
-                    <StyleInput type="text" placeholder="ENDEREÇO DE E-MAIL"/>
+                    <StyleInput type="text" placeholder="ENDEREÇO DE E-MAIL" value={email} onChange={onChangeEmail}/>
                     <p>DIGITE UMA SENHA:</p>
-                    <StyleInput type="password" placeholder="DIGITE UMA SENHA"/>
+                    <StyleInput type="password" placeholder="DIGITE UMA SENHA" value={senha} onChange={onChangeSenha}/>
                     <p>CONFIRME SUA SENHA:</p>
-                    <StyleInput type="password" placeholder="CONFIRME SUA SENHA"/>
+                    <StyleInput type="password" placeholder="CONFIRME SUA SENHA"value={confirmaSenha} onChange={onChangeConfirmaSenha}/>
 
                 </StyleDiv>
                 <StyleBoxButton>
                     <StyleButton onClick={()=>{props.mudarTela(1)}}>Voltar</StyleButton>
-                    <StyleButton onClick={()=>{props.mudarTela(3)}}>Avançar</StyleButton>
+                    <StyleButton onClick={()=>ValidaSenha()}>Avançar</StyleButton>
                 </StyleBoxButton>
             </StyleMainBox>
             <StyleFooterBox>
